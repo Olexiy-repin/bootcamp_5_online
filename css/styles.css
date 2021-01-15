@@ -9,13 +9,72 @@ body {
   color: #555555;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.address {
+  font-style: normal;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 /* ===================== COMPONENTS ===================== */
 .modal-btn {
+  min-width: 160px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  padding: 12px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.333;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  cursor: pointer;
   /* color: #ffffff; */
 }
 
@@ -23,6 +82,14 @@ body {
 .modal-btn:focus {
   color: #ffffff;
   background-color: var(--accent-color);
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .social-link {
@@ -44,6 +111,7 @@ body {
   line-height: 1.363;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-bottom: 20px;
   /* color: rgba(157, 164, 189, 0.6); */
 }
 
@@ -84,6 +152,29 @@ body {
 /* ===================== END COMPONENTS ===================== */
 
 /* ===================== HEADER ===================== */
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list-item:not(:last-child) {
+  margin-right: 40px;
+}
 
 .navigation-list-link {
   font-weight: 600;
@@ -98,11 +189,17 @@ body {
   color: var(--accent-color);
 }
 
+.logotype-link {
+  margin-right: 70px;
+}
+
 .tel-link {
   font-weight: 600;
   font-size: 12px;
   line-height: 1.333;
   letter-spacing: 0.1em;
+  margin-left: auto;
+  margin-right: 40px;
 }
 
 .tel-link:hover,
@@ -113,6 +210,25 @@ body {
 /* ===================== END HEADER ===================== */
 
 /* ===================== HERO ===================== */
+.hero .container {
+  display: flex;
+}
+
+.hero .description {
+  max-width: 400px;
+}
+
+.hero-left-side {
+  width: 100px;
+}
+
+.hero-right-side {
+  background-color: #555555;
+  flex-grow: 1;
+  padding-left: 100px;
+  padding-bottom: 206px;
+  padding-top: 272px;
+}
 
 .hero-title {
   font-family: var(--title-font);
@@ -120,23 +236,78 @@ body {
   font-size: 72px;
   line-height: 1.181;
   letter-spacing: 0.05em;
-  /* color: #ffffff; */
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 /* ===================== END HERO ===================== */
 
 /* ===================== ABOUT ===================== */
+.about .container {
+  display: flex;
+}
+
+.about-right-side {
+  padding-left: 64px;
+}
+
+.about .title {
+  margin-bottom: 20px;
+}
+
+.about .description {
+  margin-bottom: 20px;
+}
+
+.about-list {
+  display: flex;
+}
+
+.about-list-item:not(:last-child) {
+  margin-right: 30px;
+}
 
 .about-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.857;
   letter-spacing: 0.02em;
+  margin-bottom: 40px;
+  padding-right: 56px;
 }
 
 /* ===================== END ABOUT ===================== */
 
-/* ===================== END SERVICES ===================== */
+/* ===================== SERVICES ===================== */
+.services .title {
+  margin-bottom: 44px;
+}
+
+.services .modal-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.services-list-wrapper {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.services-list {
+  width: 50%;
+  padding: 30px 40px;
+  border: 1px solid #000;
+}
+
+.services-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .services-list-name,
 .services-list-price {
   font-weight: 400;
@@ -148,6 +319,45 @@ body {
 /* ===================== END SERVICES ===================== */
 
 /* =====================  ADVANTAGES ===================== */
+.advantages .container {
+  display: flex;
+}
+
+.advantages .description {
+  padding-right: 100px;
+}
+
+.advantages .title {
+  margin-bottom: 20px;
+}
+
+.advantages-left-side {
+  width: 470px;
+  flex-shrink: 0;
+  padding-left: 100px;
+}
+
+.advantages-list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.advantages-list-item {
+  width: 170px;
+  min-height: 132px;
+  padding: 20px 21px;
+  background-color: #f7f7f7;
+}
+
+.advantages-list-item:not(:nth-child(even)) {
+  margin-right: 30px;
+}
+
+.advantages-list-item:nth-child(even) {
+  margin-top: 30px;
+}
+
 .advantages-list-count {
   font-weight: 700;
   font-size: 42px;
@@ -155,6 +365,7 @@ body {
   text-align: center;
   letter-spacing: 0.05em;
   color: #303030;
+  margin-bottom: 6px;
 }
 
 .advantages-list-description {
@@ -164,9 +375,34 @@ body {
   text-align: center;
   color: #303030;
 }
+
+.advantages-right-side {
+  padding-left: 130px;
+}
 /* ===================== END ADVANTAGES ===================== */
 
 /* ===================== MASTERS ===================== */
+.masters {
+  background-color: #f7f7f7;
+}
+
+.masters .title {
+  margin-bottom: 44px;
+}
+
+.masters-list {
+  display: flex;
+  margin: -15px;
+}
+
+.masters-list-item {
+  margin: 15px;
+}
+
+.masters-list-img {
+  margin-bottom: 30px;
+}
+
 .masters-list-name {
   font-weight: 400;
   font-size: 18px;
@@ -174,6 +410,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #303030;
+  margin-bottom: 8px;
 }
 
 .masters-list-position {
@@ -187,7 +424,18 @@ body {
 /* ===================== END MASTERS ===================== */
 
 /* ===================== GALLERY ===================== */
+.gallery .subtitle {
+  margin-bottom: 44px;
+}
 
+.gallery-list {
+  display: flex;
+  margin: -15px;
+}
+
+.gallery-list-item {
+  margin: 15px;
+}
 /* ===================== END GALLERY ===================== */
 
 /* ===================== CONTACT FORM ===================== */
@@ -213,6 +461,17 @@ body {
 /* ===================== END CONTACT INFORMATION ===================== */
 
 /* ===================== FOOTER ===================== */
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .copyright {
   font-weight: 600;
   font-size: 11px;
