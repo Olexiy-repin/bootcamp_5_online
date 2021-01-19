@@ -75,7 +75,13 @@ img {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
-  /* color: #ffffff; */
+  background-color: transparent;
+  color: #303030;
+  transition: all 250ms linear;
+}
+
+.modal-btn-dark-theme {
+  color: #ffffff;
 }
 
 .modal-btn:hover,
@@ -98,6 +104,7 @@ img {
   line-height: 1.364;
   letter-spacing: 0.2em;
   color: #303030;
+  transition: color 250ms linear;
 }
 
 .social-link:hover,
@@ -167,10 +174,59 @@ img {
 .title-dark-theme {
   color: #fff;
 }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 500ms linear;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 500ms linear 500ms;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 500ms linear 0ms;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: 581px;
+  background-color: #fff;
+  transition: all 500ms linear 500ms;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
 /* ===================== END COMPONENTS ===================== */
 
 /* ===================== HEADER ===================== */
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -204,7 +260,8 @@ img {
   font-size: 12px;
   line-height: 1.333;
   letter-spacing: 0.1em;
-  /* color: #ffffff; */
+  color: #ffffff;
+  transition: color 250ms linear;
 }
 
 .navigation-list-link:hover,
@@ -214,6 +271,8 @@ img {
 
 .logotype-link {
   margin-right: 70px;
+  animation-duration: 500ms;
+  animation-iteration-count: 4;
 }
 
 .tel-link {
@@ -223,6 +282,8 @@ img {
   letter-spacing: 0.1em;
   margin-left: auto;
   margin-right: 40px;
+  color: #fff;
+  transition: color 250ms linear;
 }
 
 .tel-link:hover,
@@ -242,7 +303,16 @@ img {
 }
 
 .hero-left-side {
+  display: flex;
+  align-items: flex-end;
   width: 100px;
+  padding-left: 26px;
+  padding-bottom: 40px;
+}
+
+.hero-left-side > .social-links {
+  transform-origin: left top;
+  transform: rotate(-90deg);
 }
 
 .social-links-item {
@@ -369,7 +439,7 @@ img {
 
 .services-list-item {
   display: flex;
-  justify-content: space-between;
+  align-items: baseline;
 }
 
 .services-list-item:not(:last-child) {
@@ -383,6 +453,13 @@ img {
   line-height: 1.667;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+
+.services-list-undertitle {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  margin: 0 6px;
 }
 /* ===================== END SERVICES ===================== */
 
@@ -427,13 +504,28 @@ img {
 }
 
 .advantages-list-count {
+  position: relative;
+  width: max-content;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.357;
   text-align: center;
   letter-spacing: 0.05em;
   color: #303030;
+  margin: 0 auto;
   margin-bottom: 6px;
+}
+
+.advantages-list-count::after {
+  position: absolute;
+  top: 10px;
+  right: -12px;
+  content: "";
+  width: 11px;
+  height: 12px;
+  background-image: url("../images/advantages/plus.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .advantages-list-description {
@@ -506,6 +598,7 @@ img {
   height: 44px;
   background-color: #fff;
   border-radius: 50%;
+  transition: background-color 250ms linear;
 }
 
 .social-list-link:hover,
@@ -513,14 +606,15 @@ img {
   background-color: #000;
 }
 
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-  fill: var(--accent-color);
-}
-
 .social-list-icon {
   width: 20px;
   height: 20px;
+  transition: fill 250ms linear;
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--accent-color);
 }
 /* ===================== END MASTERS ===================== */
 

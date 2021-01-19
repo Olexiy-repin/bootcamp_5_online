@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
         integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -19,7 +20,7 @@
     <header class="header">
         <div class="container">
             <nav class="navigation">
-                <a class="logotype-link link" href="./">
+                <a class="logotype-link link animate__pulse" href="./">
                     <svg class="logotype-svg">
                         <use href="./images/sprite.svg#logo"></use>
                     </svg>
@@ -40,7 +41,7 @@
                 </ul>
             </nav>
             <a class="tel-link link" href="tel:+380441111111">+38 044 111 11 11</a>
-            <button class="modal-btn" type="button">онлайн-запись</button>
+            <button class="modal-btn modal-btn-dark-theme" data-modal-open type="button">онлайн-запись</button>
         </div>
     </header>
     <main>
@@ -104,49 +105,50 @@
                 <div class="services-list-wrapper">
                     <ul class="services-list list">
                         <li class="services-list-item">
-                            <span class="services-list-name">Мужская стрижка</span><span class="services-list-price">от
-                                300
-                                грн.</span>
+                            <span class="services-list-name">Мужская стрижка</span>
+                            <span class="services-list-undertitle"></span>
+                            <span class="services-list-price">от 300 грн.</span>
                         </li>
                         <li class="services-list-item">
-                            <span class="services-list-name">Стрижка бороды</span><span class="services-list-price">от
-                                200
-                                грн.</span>
+                            <span class="services-list-name">Стрижка бороды</span>
+                            <span class="services-list-undertitle"></span>
+                            <span class="services-list-price">от 200 грн.</span>
                         </li>
                         <li class="services-list-item">
-                            <span class="services-list-name">Стрижка усов</span><span class="services-list-price">от 200
-                                грн.</span>
+                            <span class="services-list-name">Стрижка усов</span>
+                            <span class="services-list-undertitle"></span>
+                            <span class="services-list-price">от 200 грн.</span>
                         </li>
                         <li class="services-list-item">
-                            <span class="services-list-name">Бритье опасной бритвой</span><span
-                                class="services-list-price">от
-                                200 грн.</span>
+                            <span class="services-list-name">Бритье опасной бритвой</span>
+                            <span class="services-list-undertitle"></span>
+                            <span class="services-list-price">от 200 грн.</span>
                         </li>
                     </ul>
                     <ul class="services-list list">
                         <li class="services-list-item">
-                            <span class="services-list-name">Cтрижка у стажера</span><span
-                                class="services-list-price">от 50
-                                грн.</span>
+                            <span class="services-list-name">Cтрижка у стажера</span>
+                            <span class="services-list-undertitle"></span>
+                            <span class="services-list-price">от 50 грн.</span>
                         </li>
                         <li class="services-list-item">
-                            <span class="services-list-name">Стрижка под насадку</span><span
-                                class="services-list-price">от
-                                200
-                                грн.</span>
+                            <span class="services-list-name">Стрижка под насадку</span>
+                            <span class="services-list-undertitle"></span>
+                            <span class="services-list-price">от 200 грн.</span>
                         </li>
                         <li class="services-list-item">
-                            <span class="services-list-name">Детская стрижка (до 12 лет)</span><span
-                                class="services-list-price">от 300 грн.</span>
+                            <span class="services-list-name">Детская стрижка (до 12 лет)</span>
+                            <span class="services-list-undertitle"></span>
+                            <span class="services-list-price">от 300 грн.</span>
                         </li>
                         <li class="services-list-item">
-                            <span class="services-list-name">Камуфлирование седины</span><span
-                                class="services-list-price">от
-                                200 грн.</span>
+                            <span class="services-list-name">Камуфлирование седины</span>
+                            <span class="services-list-undertitle"></span>
+                            <span class="services-list-price">от 200 грн.</span>
                         </li>
                     </ul>
                 </div>
-                <button class="modal-btn" type="button">онлайн-запись</button>
+                <button class="modal-btn modal-btn-dark-theme" type="button">онлайн-запись</button>
             </div>
         </section>
 
@@ -378,6 +380,14 @@
             </ul>
         </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-btn" data-modal-close>X</button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
