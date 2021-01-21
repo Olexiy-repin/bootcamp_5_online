@@ -216,6 +216,7 @@ img {
   width: 528px;
   height: 581px;
   background-color: #fff;
+  padding: 40px;
   /* transition: all 500ms linear 500ms; */
 }
 
@@ -229,6 +230,125 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-field {
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+}
+
+.modal-form-field:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.modal-form-input-wrapper {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
+
+.modal-form-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: border-color 250ms linear;
+}
+
+.modal-form-input:focus,
+.modal-form-message:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal-form-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: teal;
+  transition: background-color 250ms linear;
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  background-color: var(--accent-color);
+}
+
+.modal-form-message {
+  display: block;
+  width: 100%;
+  height: 120px;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  resize: none;
+  padding: 12px 16px;
+  transition: border-color 250ms linear;
+}
+
+.modal-form-message::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-policy-label {
+  font-size: 14px;
+  line-height: 1.714;
+  margin-bottom: 30px;
+}
+
+.modal-form-policy-label::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  outline: 1px solid #212121;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.modal-form-policy-check:checked + .modal-form-policy-label::before {
+  background-color: var(--accent-color);
+  border: 4px solid #ffffff;
+}
+
+.modal-form-btn {
+  min-width: 160px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.333;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  color: #303030;
+  transition: all 250ms linear;
+  align-self: center;
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
 }
 /* ===================== END COMPONENTS ===================== */
 

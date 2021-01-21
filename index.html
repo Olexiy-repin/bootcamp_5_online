@@ -384,6 +384,31 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="close-btn" data-modal-close>X</button>
+            <form action="#" class="modal-form">
+                <label class="modal-form-field">
+                    Имя
+                    <span class="modal-form-input-wrapper">
+                        <input type="text" name="user-name" class="modal-form-input" required>
+                        <span class="modal-form-icon"></span>
+                    </span>
+                </label>
+                <label class="modal-form-field">
+                    Телефон
+                    <span class="modal-form-input-wrapper">
+                        <input type="tel" name="user-phone" class="modal-form-input" required>
+                        <span class="modal-form-icon"></span>
+                    </span>
+                </label>
+                <label class="modal-form-field">
+                    Комментарий
+                    <textarea name="user-message" class="modal-form-message" placeholder="Введите текст"></textarea>
+                </label>
+                <input id="policy" type="checkbox" value="policy-accept "
+                    class="modal-form-policy-check visually-hidden">
+                <label for="policy" class="modal-form-policy-label">Соглашаюсь с рассылкой и принимаю <a
+                        href="#">Условия договора</a></label>
+                <button type="submit" class="modal-form-btn">Отправить</button>
+            </form>
         </div>
     </div>
 
