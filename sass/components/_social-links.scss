@@ -1,0 +1,44 @@
+.social-links {
+  display: flex;
+
+  .hero-left-side > & {
+    transform-origin: left top;
+    transform: rotate(-90deg);
+  }
+}
+
+.social-links-item {
+  flex-shrink: 0;
+
+  &:first-child {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 60px;
+      height: 1px;
+      background-color: #303030;
+      margin-right: 40px;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.social-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.364;
+  letter-spacing: 0.2em;
+  color: #303030;
+  transition: color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

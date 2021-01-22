@@ -1,0 +1,24 @@
+/* ===================== ABOUT ===================== */
+
+.about-right-side {
+  padding-left: 64px;
+}
+
+.about-list {
+  display: flex;
+}
+
+.about-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.857;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+  padding-right: 56px;
+}
+
+/* ===================== END ABOUT ===================== */

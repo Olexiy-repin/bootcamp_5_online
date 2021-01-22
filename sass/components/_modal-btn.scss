@@ -1,0 +1,30 @@
+.modal-btn {
+  min-width: 160px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.333;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  color: #303030;
+  transition: all 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: var(--accent-color);
+  }
+
+  .services & {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.modal-btn-dark-theme {
+  color: #ffffff;
+}

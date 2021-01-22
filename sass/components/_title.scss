@@ -1,0 +1,23 @@
+.title {
+  font-family: var(--title-font);
+  @include font(42px, 700, 49px);
+  letter-spacing: 0.05em;
+
+  .about &,
+  .advantages & {
+    margin-bottom: 20px;
+  }
+
+  .masters &,
+  .services & {
+    margin-bottom: 44px;
+  }
+}
+
+.title-light-theme {
+  color: #303030;
+}
+
+.title-dark-theme {
+  color: #fff;
+}
