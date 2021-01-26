@@ -1,22 +1,53 @@
 .container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
+  padding: 0 10px;
+}
 
-  .header & {
-    display: flex;
-    align-items: center;
-  }
-
-  .hero &,
-  .about &,
-  .advantages & {
-    display: flex;
-  }
-
-  .footer & {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    padding: 0 31px;
+    margin: 0 auto;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 39px;
+
+    .hero &,
+    .about & {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+}
+
+// .container {
+//   width: 1200px;
+//   padding: 0 15px;
+//   margin: 0 auto;
+
+//   .header & {
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   .hero &,
+//   .about &,
+//   .advantages & {
+//     display: flex;
+//   }
+
+//   .footer & {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+// }
