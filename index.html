@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <div class="container">
             <nav class="navigation">
                 <a class="logotype-link link animate__shakeY" href="./">
@@ -40,10 +40,42 @@
                     </li>
                 </ul>
             </nav>
+            <button class="menu-btn" data-menu-button>
+                <svg class="menu-btn-icon">
+                    <use href="./images/sprite.svg#menu-icon"></use>
+                </svg>
+            </button>
             <a class="tel-link link" href="tel:+380441111111">+38 044 111 11 11</a>
             <button class="modal-btn modal-btn-dark-theme" data-modal-open type="button">онлайн-запись</button>
         </div>
-    </header> -->
+        <div class="mobile-menu" data-menu>
+            <button type="button" class="mobile-menu-close-btn" data-menu-close>X</button>
+            <ul class="mobile-menu-list list">
+                <li class="mobile-menu-list-item">
+                    <a href="" class="mobile-menu-link link">О нас</a>
+                </li>
+                <li class="mobile-menu-list-item">
+                    <a href="" class="mobile-menu-link link">Услуги и цены</a>
+                </li>
+                <li class="mobile-menu-list-item">
+                    <a href="" class="mobile-menu-link link">Мастера</a>
+                </li>
+                <li class="mobile-menu-list-item">
+                    <a href="" class="mobile-menu-link link">Контакты</a>
+                </li>
+            </ul>
+            <a href="#" class="mobile-menu-tel-link link">+38 044 111 11 11</a>
+            <button class="modal-btn modal-btn-dark-theme" data-modal-open type="button">онлайн-запись</button>
+            <ul class="mobile-menu-social-list list">
+                <li class="mobile-menu-social-item">
+                    <a href="" class="mobile-menu-social-link link">Instagram</a>
+                </li>
+                <li class="mobile-menu-social-item">
+                    <a href="" class="mobile-menu-social-link link">Youtube</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <main>
         <!-- HERO -->
         <section class="hero">
@@ -416,7 +448,7 @@
         </div>
     </footer> -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="close-btn" data-modal-close>X</button>
             <form action="#" class="modal-form">
@@ -445,9 +477,10 @@
                 <button type="submit" class="modal-form-btn">Отправить</button>
             </form>
         </div>
-    </div> -->
+    </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
